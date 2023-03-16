@@ -10,9 +10,22 @@ namespace LearnC_
     {
         static void Main(string[] args)
         {
-            string da = "da";
-            Console.WriteLine(da);
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.InputEncoding = Encoding.Unicode;
+            byte age;
+            Console.Write("age: ");
+            age = Convert.ToByte(Console.ReadLine());
+            if(age <= 20 )
+            {
+                Console.Write("no");
+            } 
+            else
+            {
+                Console.Write("yes");
+            }
             Console.ReadLine();
+
         }
     }
 }
