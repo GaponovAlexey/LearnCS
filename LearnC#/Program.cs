@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LearnC_
 {
@@ -10,22 +6,21 @@ namespace LearnC_
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
-            Console.OutputEncoding = Encoding.Unicode;
-            Console.InputEncoding = Encoding.Unicode;
-            byte age;
-            Console.Write("age: ");
-            age = Convert.ToByte(Console.ReadLine());
-            if(age <= 20 )
-            {
-                Console.Write("no");
-            } 
-            else
-            {
-                Console.Write("yes");
-            }
+            public enum State
+        {
+            Walking,
+            Reading,
+            Drinkin
+        }
+        int[] arr = new int[3];
+        int[] temArr = new int[5];
+
+        arr = temArr;
+            arr[0] = 5;
+            Console.WriteLine(temArr[0]);
+
             Console.ReadLine();
 
         }
-    }
+}
 }
