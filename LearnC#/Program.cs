@@ -6,100 +6,16 @@ namespace LearnC_
     {
         static void Main(string[] args)
         {
+            int[] arr = { 1, 2, 3, 0, 6, 7, 4, 5 };
 
-            char[,] map =
-            {
-                {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'},
-                {'#',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'},
-                {'#',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'},
-                {'#',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','$',' ','#'},
-                {'#',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'},
-                {'#',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ','#',' ',' ',' ',' ','#'},
-                {'#',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ','#',' ',' ',' ',' ','#'},
-                {'#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#',' ',' ',' ',' ','#'},
-                {'#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#',' ',' ',' ',' ','#'},
-                {'#',' ','#','#','#',' ',' ',' ',' ',' ',' ',' ','#',' ',' ',' ',' ','#'},
-                {'#',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ','#',' ',' ',' ',' ','#'},
-                {'#',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ','#',' ',' ',' ',' ','#'},
-                {'#',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ','#',' ',' ',' ',' ','#'},
-                {'#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'},
-                {'#',' ','$',' ',' ',' ',' ',' ',' ',' ',' ','$',' ',' ',' ','$',' ','#'},
-                {'#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'},
-                {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'},
-            };
+            Console.WriteLine(string.Join("", arr));
 
-            int userX = 6, userY = 6;
-            char[] bag = new char[1];
-
-            Console.CursorVisible = false;
-            while (true)
-            {
-                Console.SetCursorPosition(0, 20);
-                Console.Write("Bag:");
-                for (int i = 0; i < bag.Length; i++)
-                {
-                    Console.Write(bag[i] + " ");
-                }
-
-                Console.SetCursorPosition(0, 0);
-                for (int i = 0; i < map.GetLength(0); i++)
-                {
-                    for (int j = 0; j < map.GetLength(1); j++)
-                    {
-                        Console.Write(map[i, j]);
-                    }
-                    Console.WriteLine();
-                }
-                Console.SetCursorPosition(userY, userX);
-                Console.Write("@");
-                ConsoleKeyInfo charKey = Console.ReadKey();
-                switch (charKey.Key)
-                {
-                    case ConsoleKey.UpArrow:
-                        if (map[userX - 1, userY] != '#')
-                        {
-                            userX--;
-                        }
-                        break;
-                    case ConsoleKey.DownArrow:
-                        if (map[userX + 1, userY] != '#')
-                        {
-                            userX++;
-                        }
-                        break;
-                    case ConsoleKey.LeftArrow:
-                        if (map[userX - 1, userY] != '#')
-                        {
-                            userY--;
-                        }
-                        break;
-                    case ConsoleKey.RightArrow:
-                        if (map[userX + 1, userY] != '#')
-                        {
-                            userY++;
-                        }
-                        break;
-                }
+            Console.ReadLine();
+        }
+        static void sort(int[] arr, ConsoleColor color)
+        {
 
 
-                if (map[userX, userY] == '$')
-                {
-                    map[userX, userY] = 'o';
-                    char[] tempBag = new char[bag.Length + 1];
-                    for (int i = 0; i < bag.Length; i++)
-                    {
-                        tempBag[i] = bag[i];
-                    }
-                    tempBag[tempBag.Length - 1] = '$';
-                    bag = tempBag;
-                }
-                Console.Clear();
-            }
-
-
-
-
-            // Console.ReadLine();
         }
     }
 }
