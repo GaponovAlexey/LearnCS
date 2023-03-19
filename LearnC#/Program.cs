@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LearnC_
 {
@@ -6,16 +7,22 @@ namespace LearnC_
     {
         static void Main(string[] args)
         {
-            int[] arr = { 1, 2, 3, 0, 6, 7, 4, 5 };
-
-            Console.WriteLine(string.Join("", arr));
-
+            Console.WriteLine("da");
             Console.ReadLine();
         }
-        static void sort(int[] arr, ConsoleColor color)
-        {
 
 
-        }
     }
+    class Perf
+    {
+
+
+    }
+    class Boar
+    {
+
+    }
+
 }
+
+
